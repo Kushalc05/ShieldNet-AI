@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShieldNet | Model Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="stars"></div>
+<div class="container">
+    <header>
+        <div class="logo">SHIELD<span>NET</span> <small>v2.0</small></div>
+        <div class="sys-status"><span class="pulse"></span> VERIFICATION_COMPLETE</div>
+    </header>
+
+    <main class="dashboard">
+        <div class="visual-panel">
+            <div class="scan-bar"></div>
+            <img src="{{ url_for('static', filename='hero.jpeg') }}" alt="Neural Network Interface">
+        </div>
+
+        <div class="upload-panel result-theme">
+            <div class="glitch-title" data-text="VALIDATION_REPORT">VALIDATION_REPORT</div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <small>ACCURACY_RATING</small>
+                    <div style="font-size: 2rem; color: var(--green);">{{ accuracy }}%</div>
+                </div>
+                <div class="stat-card">
+                    <small>MATCH_COUNT</small>
+                    <div style="font-size: 2rem; color: var(--cyan);">{{ matches }} / {{ total }}</div>
+                </div>
+            </div>
+
+            <div class="table-container" style="margin-top: 20px; flex-grow: 1; overflow-y: auto;">
+                <h3 style="font-family: 'Orbitron'; font-size: 0.9rem; margin-bottom: 10px;">SAMPLE_COMPARISON_LOG</h3>
+                <div class="cyber-table-wrapper">
+                    {{ table | safe }}
+                </div>
+            </div>
+            <div class="disclaimer-box" style="margin-top: 15px; margin-bottom: 15px;">
+            <span class="warning-icon">⚠</span> 
+            <small>NEURAL_SAFEGUARD: ShieldNet is an AI and may provide inaccurate classifications.</small>
+            </div>
+            <button onclick="window.location.href='/'" class="cyber-btn" style="margin-top:20px;">
+                <span>RETURN_TO_DASHBOARD</span>
+            </button>
+        </div>
+    </main>
+
+    <footer>
+        <span>MODEL_STATUS: VERIFIED</span>
+        <span>ANALYSIS_MODE: VALIDATION</span>
+    </footer>
+</div>
+</body>
+</html>

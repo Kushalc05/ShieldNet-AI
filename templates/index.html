@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShieldNet | AI Neural Defense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div class="stars"></div>
+<div class="container">
+    <header>
+        <div class="logo">SHIELD<span>NET</span></div>
+        <div class="sys-status"><span class="pulse"></span> SYSTEM_READY</div>
+    </header>
+
+    <main class="dashboard">
+        <div class="visual-panel">
+            <div class="scan-bar"></div>
+            <img src="{{ url_for('static', filename='hero.jpeg') }}" alt="Neural Network Interface">
+        </div>
+
+        <div class="control-panel">
+            <section class="upload-panel primary-feature">
+                <div class="glitch-title" data-text="THREAT_DETECTION">THREAT_DETECTION</div>
+                <p>Upload network traffic logs (CSV) for deep heuristic analysis.</p>
+                <form action="/predict" method="post" enctype="multipart/form-data" style="flex-grow: 1; display: flex; flex-direction: column;">
+                    <label class="drop-zone" for="file">
+                        <div class="icon" style="font-size:3rem;margin-bottom:10px;">⤓</div>
+                        <span id="file-name">DRAG_FILE_OR_BROWSE</span>
+                        <input type="file" name="file" id="file" hidden required onchange="document.getElementById('file-name').innerText=this.files[0].name">
+                    </label>
+                    <button type="submit" class="cyber-btn"><span>INITIALIZE_SCAN</span></button>
+                    <div class="disclaimer-box" style="margin-top: 20px;">
+    <span class="warning-icon">⚠</span> 
+    <small>NEURAL_SAFEGUARD: ShieldNet is an AI and may provide inaccurate classifications.</small>
+</div>
+                </form>
+            </section>
+
+            <section class="verify-mini-panel">
+                <details>
+                    <summary class="verify-toggle"><span>[+] MODEL_VERIFICATION_SUB_ROUTINE</span></summary>
+                    <div class="verify-content">
+                        <p style="font-size: 0.8rem; margin: 10px 0;">Cross-validate model accuracy with labeled datasets.</p>
+                        <form action="/verify" method="post" enctype="multipart/form-data">
+                            <input type="file" name="file" id="verify-file" hidden required onchange="document.getElementById('verify-label-text').innerText=this.files[0].name">
+                            <label for="verify-file" class="mini-drop">
+                                <span id="verify-label-text">SELECT_LABELED_DATA</span>
+                            </label>
+                            <button type="submit" class="cyber-btn mini">VERIFY_MODEL</button>
+                        </form>
+                    </div>
+                </details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <span>NETWORK_SECURED: TRUE</span>
+        <span>ENCRYPTION: AES-256</span>
+    </footer>
+</div>
+</body>
+</html>
