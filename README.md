@@ -117,7 +117,7 @@ Kishan N
 Lalithkiran S
 
 🎓 Project Guide
-Mahesh Kumar VB
+Prof. Mahesh Kumar VB
 
 📚 Learning Outcomes
 This project helped us gain practical experience in:
